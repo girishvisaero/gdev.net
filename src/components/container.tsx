@@ -64,7 +64,7 @@ export default function Container(props: any) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8">
+    <div className="flex flex-col min-h-[48vh] items-start max-w-2xl mx-auto w-full mb-8">
       <div className="bg-gray-50 dark:bg-gray-900">
         <Head>
           <title>{meta.title}</title>
