@@ -34,11 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen">
+      <body>
         <Providers>
           <main
             id="skip"
-            className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+            className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900 min-h-screen"
           >
             <Header />
             <Container>{children}</Container>
