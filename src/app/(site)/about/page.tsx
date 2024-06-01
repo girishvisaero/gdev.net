@@ -1,5 +1,12 @@
 import Link from "next/link";
 import Container from "@/components/container";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Girish Chaudhari",
+  description:
+    "My name is Girish Chaudhari, and I am a Web Developer, Creator, and Blogger from Maharashtra, India.",
+};
 
 export default function About() {
   return (
@@ -11,7 +18,7 @@ export default function About() {
         <p className="text-black dark:text-white mb-4">
           My name is Girish Chaudhari, and I am a Web Developer from{" "}
           <a
-            href="https://en.wikipedia.org/wiki/Jalgaon_district"
+            href="https://en.wikipedia.org/wiki/maharashtra"
             target="blank"
             rel="noopener noreferrer"
           >
@@ -25,7 +32,9 @@ export default function About() {
           summary of my journey and experience.
         </p>
         <h4>Visaero India</h4>
-        <h5 className="text-gray-400/80 dark:text-slate-400 font-normal">Software Developer</h5>
+        <h5 className="text-gray-500/80 dark:text-slate-200/60 font-normal">
+          Software Developer
+        </h5>
         <p className="text-black dark:text-white mb-6">
           Since joining Visaero India, I have been involved in various projects,
           primarily focusing on web development using modern technologies like
@@ -44,7 +53,9 @@ export default function About() {
           balance, and setting realistic goals for professional growth.
         </p>
         <h4>ITCode Infotech</h4>
-        <h5 className="text-gray-400/80 dark:text-slate-400 font-normal">Web Developer, sep, 2021 - sep - 2022</h5>
+        <h5 className="text-gray-500/80 dark:text-slate-200/60 font-normal">
+          Web Developer, sep, 2021 - sep - 2022
+        </h5>
         <p className="text-black dark:text-white mb-6">
           At my previous job, I transitioned from completing my Bachelor's
           degree in Computer Applications to joining the workforce as a web

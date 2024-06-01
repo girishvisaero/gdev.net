@@ -28,13 +28,13 @@ function NavItem({
           isActive
             ? "font-semibold text-gray-800 dark:text-gray-200"
             : "font-normal text-gray-600 dark:text-gray-400",
-          "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
+          "hidden md:inline-block p-1 sm:px-3 my-1 sm:py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
         )}
       >
         <span
           className={cn(
             isNew
-              ? "font-extrabold text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+              ? "font-semibold text-transparent text-sm bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
               : "capsize"
           )}
         >
@@ -49,7 +49,7 @@ type Props = {
   className?: string
 };
 
-const Header = ({className}: Props) => {
+const WorkspaceHeader = ({className}: Props) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
@@ -57,7 +57,7 @@ const Header = ({className}: Props) => {
 
   return (
     <header className="flex flex-col justify-center md:px-8">
-      <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+      <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto border rounded-full px-3 my-2 text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
         <a href="#skip" className="skip-nav">
           Skip to content
         </a>
@@ -72,7 +72,7 @@ const Header = ({className}: Props) => {
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+          className="w-9 h-9 bg-gray-200 rounded-full dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
           onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         >
           {mounted && (
@@ -106,4 +106,4 @@ const Header = ({className}: Props) => {
   );
 };
 
-export default Header;
+export default WorkspaceHeader;
