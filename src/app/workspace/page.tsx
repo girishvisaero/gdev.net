@@ -11,7 +11,7 @@ const page = (props: Props) => {
         {/* <PlateEditor /> */}
         Editor
       </div>
-      <div className="h-full ">
+      <div className="h-full">
         <WhiteBoard />
       </div>
     </div>
