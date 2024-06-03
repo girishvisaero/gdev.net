@@ -1,4 +1,4 @@
-// {
-//     "presets": ["@nrwl/next/babel"],
-//     "plugins": ["@babel/plugin-transform-runtime"]
-//   }
+{
+  //     "presets": ["@nrwl/next/babel"],
+  //     "plugins": ["@babel/plugin-transform-runtime"]
+}
