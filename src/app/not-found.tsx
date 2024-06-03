@@ -8,7 +8,7 @@ export default function NotFound() {
     <>
       <Header />
       <Container>
-        <div>
+        <div className="sm:px-8">
           <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
             404 – Page not found
           </h1>

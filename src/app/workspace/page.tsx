@@ -1,7 +1,9 @@
 // import { PlateEditor } from "@/components/Editor";
-import WhiteBoard from "@/components/white-board";
+import dynamic from "next/dynamic";
 import React from "react";
-
+const Canvas = dynamic(() => import("@/components/canvas"), {
+  ssr: false,
+});
 type Props = {};
 
 const page = (props: Props) => {
@@ -12,7 +14,7 @@ const page = (props: Props) => {
         Editor
       </div>
       <div className="h-full">
-        <WhiteBoard />
+        <Canvas />
       </div>
     </div>
   );
