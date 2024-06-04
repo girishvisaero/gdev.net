@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Excalidraw, MainMenu, WelcomeScreen } from "@excalidraw/excalidraw";
+import { useTheme } from "next-themes";
 
 const Canvas = () => {
   const [whiteBoard, setWhiteBoard] = useState<any>();
+  const { theme } = useTheme();
 
   const saveWhiteboard = () => {};
 
@@ -11,7 +13,7 @@ const Canvas = () => {
     <>
       <div className="h-full w-full">
         <Excalidraw
-          theme="dark"
+          theme={theme as "dark" | "light"}
           UIOptions={{
             canvasActions: {
               export: false,
@@ -20,7 +22,7 @@ const Canvas = () => {
             },
           }}
           onChange={(excaliDrawElements, appState, files) => {
-            console.log(excaliDrawElements);
+            // console.log(excaliDrawElements);
           }}
         >
           <MainMenu>

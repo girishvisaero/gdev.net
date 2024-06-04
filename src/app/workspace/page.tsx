@@ -4,16 +4,21 @@ import React from "react";
 const Canvas = dynamic(() => import("@/components/canvas"), {
   ssr: false,
 });
+const MDXEditor = dynamic(() => import("@/components/editor"), {
+  ssr: false,
+});
 type Props = {};
 
 const page = (props: Props) => {
+
+
   return (
-    <div className="grid grid-cols-2 h-full">
-      <div className="border-r h-full ">
+    <div className="grid grid-cols-2 h-full overflow-hidden">
+      <div className="border-r h-full dark:bg-black min-h-full">
         {/* <PlateEditor /> */}
-        Editor
+        <MDXEditor />
       </div>
-      <div className="h-full">
+      <div className="h-full ">
         <Canvas />
       </div>
     </div>

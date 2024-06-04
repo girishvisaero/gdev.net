@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <>
+    <div className="px-8">
       <Header />
       <Container>
-        <div className="sm:px-8">
+        <div className="">
           <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
             404 – Page not found
           </h1>
@@ -21,6 +21,6 @@ export default function NotFound() {
         </div>
       </Container>
       <Footer />
-    </>
+    </div>
   );
 }
